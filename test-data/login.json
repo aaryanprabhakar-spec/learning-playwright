@@ -1,0 +1,10 @@
+{
+    "valid": {
+        "username": "4dec@yopmail.com",
+        "password": "Sprouts@2025"
+    },
+    "invalid": {
+        "username": "4dec@yopmail.com",
+        "password": "Sprouts@2026"
+    }
+}
