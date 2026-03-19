@@ -9,6 +9,7 @@ test('valid_credentials',async({page})=>{
     await login.goto();
     await login.login(UserData.valid.username,UserData.valid.password);
     await expect(page).toHaveURL('/target-profiles/accounts')
+    await page.context().storageState({ path: 'auth.json' });
 })
 
 test('invalid credentials',async({page})=>{
