@@ -8,7 +8,15 @@ test('Create_Predefined',async({page})=>{
      await page.goto('/target-profiles/accounts');
 
      await signal.createPredefinedSignal();
-     await page.waitForTimeout(600000);
+     await page.waitForTimeout(60_000);
+
+
+})
+test('Create_CustomSignal',async({page})=>{
+    const signal=new CreateSignal(page);
+    await page.goto('/target-profiles/accounts');
+    await signal.createCustomSignal();
+    await page.waitForTimeout(60_000);
 
 
 })
